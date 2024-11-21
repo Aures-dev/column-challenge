@@ -1,0 +1,105 @@
+@font-face {
+    font-family: "Lexend Deca";
+    src: url("/fonts/Lexend_Deca/LexendDeca-VariableFont_wght.ttf");
+}
+@font-face {
+    font-family: "Big Shoulders Display";
+    src: url("/fonts/Big_Shoulders_Display/BigShouldersDisplay-VariableFont_wght.ttf");
+}
+*{
+    box-sizing: border-box;
+}
+
+main,button{
+    font-family: Lexend Deca;
+    font-size: 15px;
+    color: white;
+}
+
+h2{
+    font-family: Big Shoulders Display;
+}
+
+.attribution { font-size: 20px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
+
+.flex_contaier{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.grid_container{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    /* grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); pour m'assurer la responsivité je fixe les colonnes à 200px et si l'espace est insuffisant on vas à la ligne */
+    justify-content: center;
+    width: 60%;
+    margin-top: 150px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.grid_item1{
+    background-color: hsl(31, 77%, 52%);
+    padding: 50px;
+}
+.grid_item2{
+    background-color: hsl(184, 100%, 22%);
+    padding: 50px;
+}
+.grid_item3{
+    background-color: hsl(179, 100%, 13%);
+    padding: 50px;
+}
+
+button{
+    margin-top: 50px;
+    border-color: white;
+    border-radius: 30px;
+    padding-left: 20px;
+    padding-top: 8px;
+    padding-right: 20px;
+    padding-bottom: 8px;
+}
+.button1{
+    background-color: hsl(31, 77%, 52%);
+}
+.button1:hover{
+    background-color: white;
+    color: hsl(31, 77%, 52%);
+}
+.button2{
+    background-color: hsl(184, 100%, 22%);
+}
+.button2:hover{
+    background-color: white;
+    color: hsl(184, 100%, 22%);
+}
+.button3{
+    background-color: hsl(179, 100%, 13%);
+}
+.button3:hover{
+    background-color: white;
+    color: hsl(179, 100%, 13%);
+}
+
+@media (max-width: 768px) {
+    .grid_container {
+      grid-template-columns: 1fr; /* 1 colonne pour les écrans étroits */
+      width: 80%;
+    }
+    .button1{
+        background-color: white;
+        color: hsl(31, 77%, 52%);
+    }
+    .button2{
+        background-color: white;
+        color: hsl(184, 100%, 22%);
+    }
+    .button3{
+        background-color: white;
+        color: hsl(179, 100%, 13%);
+    }
+}
